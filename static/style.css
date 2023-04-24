@@ -1,0 +1,105 @@
+/* Estilos generales del formulario */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #402050;
+    border-radius: 10px;
+    padding: 20px;
+    }
+
+/* Añadir un h1 blanco y centrado */
+form h1 {
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    }
+
+/* Añadir un h2 blanco y centrado */
+form h2 {
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+
+    }
+
+/* Estilos de los campos del formulario */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:bold;
+    }
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"],
+form select,
+form textarea {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    margin: 0 auto 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    }
+
+/* Alinear las etiquetas a la izquierda y alinearlas con las cajas de los campos */
+form label {
+    text-align: left;
+    width: 90%;
+    display: inline-block;
+    margin-bottom: 10px;
+    }
+
+/* Estilos del botón de enviar */
+form button {
+    background-color: #B692A9;
+    color: #402050;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    }
+
+/* Estilos para los párrafos */
+form p {
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight:300;
+    }
+
+
+/* Estilos específicos para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    form {
+        padding: 10px;
+    }
+}
+
+.caja {
+    background-color: white;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.respuesta_chat {
+    color: black;
+    margin: 15px;
+    font-family: 'Segoe UI';
+    display: inline-block;
+}

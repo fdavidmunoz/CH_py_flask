@@ -1,0 +1,82 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.seccion_respuesta {
+    background-color: #402050;
+    max-width: 600px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+/* Añadir un h1 blanco y centrado */
+h1 {
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 30px;
+    margin:auto;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 90%;
+
+    }
+
+/* Añadir un h2 blanco y centrado */
+h2 {
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    }
+
+a {
+    color: #B692A9;
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(139, 167, 172); /* ajusta el color según tus necesidades */
+}
+/* Estilos para los párrafos */
+p {
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight:300;
+    }
+
+.caja {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.pie {
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight:300;
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.respuesta_chat {
+    color: black;
+    margin: 15px;
+    font-family: 'Segoe UI';
+    display: inline-block;
+}

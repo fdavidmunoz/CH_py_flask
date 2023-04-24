@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cómo Heredar Chatbot</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+
+        <section class="formulariochat">
+        <form action="/" method="post">
+            <h1>Cómo Hererdar CHATBOT</h1>
+            <p>Hola, para poder responderte profesionalmente voy a tener que hacerte unas preguntillas:</p>
+            <label>Primero dime tu nombre</label>
+            <input type="text" id="nombre" name="nombre" required><br>
+
+            <div id="emailDiv" style="display: none;">
+                <label>Y una dirección de email, por favor</label>
+                <input type="email" id="email" name="email" required><br>
+            </div>
+
+            <div id="testamentoDiv" style="display: none;">
+                <label>¿Sabes si hay testamento escrito registrado?</label>
+                <input type="text" id="testamento" name="testamento" required><br>
+            </div>
+
+            <div id="cantidadDiv" style="display: none;">
+                <label>¿A cuánto asciende la herencia, más o menos?</label>
+                <input type="text" id="cantidad" name="cantidad" required><br>
+            </div>
+
+            <div id="inmueblesDiv" style="display: none;">
+                <label>¿La herencia consta de bienes inmuebles?</label>
+                <input type="text" id="inmuebles" name="inmuebles" required><br>
+            </div>
+
+            <div id="comunidadDiv" style="display: none;">
+                <label>¿En qué comunidad autónoma se va a declarar?</label>
+                <select id="comunidad" name="comunidad" required>
+                    <option value="">Seleccionar</option>
+                    <option value="Andalucía">Andalucía</option>
+                    <option value="Aragón">Aragón</option>
+                    <option value="Principado de Asturias">Principado de Asturias</option>
+                    <option value="Illes Balears">Illes Balears</option>
+                    <option value="Canarias">Canarias</option>
+                    <option value="Cantabria">Cantabria</option>
+                    <option value="Castilla y León">Castilla y León</option>
+                    <option value="Castilla-La Mancha">Castilla-La Mancha</option>
+                    <option value="Catalunya">Catalunya</option>
+                    <option value="Comunitat Valenciana">Comunitat Valenciana</option>
+                    <option value="Extremadura">Extremadura</option>
+                    <option value="Galicia">Galicia</option>
+                    <option value="Comunidad de Madrid">Comunidad de Madrid</option>
+                    <option value="Región de Murcia">Región de Murcia</option>
+                    <option value="Comunidad Foral de Navarra">Comunidad Foral de Navarra</option>
+                    <option value="Euskadi">Euskadi</option>
+                    <option value="La Rioja">La Rioja</option>
+                    <option value="Ciudad Autónoma de Ceuta">Ciudad Autónoma de Ceuta</option>
+                    <option value="Ciudad Autónoma de Melilla">Ciudad Autónoma de Melilla</option>
+                </select><br>
+            </div>
+
+            <div id="consultaDiv" style="display: none;">
+                <label>Dime, ¿qué te preocupa?</label>
+                <input type="text" id="consulta" name="consulta" required><br>
+            </div>
+            <div id="aceptacionDiv" style="display: none;">
+                <label>Acepto la política de privacidad:</label>
+                <input type="checkbox" id="privacidad" name="privacidad" required><br><br>
+                <button type="submit">Quiero conocer la respuesta</button></div>
+
+<!--            <div class="caja">-->
+<!--                <p class="respuesta_chat">{{chat}}</p>-->
+<!--            </div>-->
+
+        </form>
+        </section>
+        
+        <script>
+            function mostrarCampo(id) {
+            document.getElementById(id).style.display = "block";
+            }
+
+            function ocultarCampo(id) {
+                document.getElementById(id).style.display = "none";
+            }
+
+            function validarNombre() {
+                var nombre = document.getElementById("nombre").value;
+                if (nombre != "") {
+                    mostrarCampo("emailDiv");
+                } else {
+                    ocultarCampo("emailDiv")
+                    ocultarCampo("testamentoDiv");
+                    ocultarCampo("cantidadDiv");
+                    ocultarCampo("inmueblesDiv");
+                    ocultarCampo("comunidadDiv");
+                    ocultarCampo("consultaDiv");
+                    ocultarCampo("aceptacionDiv");
+                }
+            }
+
+            function validarEmail() {
+                var email = document.getElementById("email").value;
+                if (email != "") {
+                    mostrarCampo("testamentoDiv");
+                } else {
+                    ocultarCampo("testamentoDiv");
+                    ocultarCampo("cantidadDiv");
+                    ocultarCampo("inmueblesDiv");
+                    ocultarCampo("comunidadDiv");
+                    ocultarCampo("consultaDiv");
+                    ocultarCampo("aceptacionDiv");
+                }
+            }
+
+            function validarTestamento() {
+                var testamento = document.getElementById("testamento").value;
+                if (testamento != "") {
+                    mostrarCampo("cantidadDiv");
+                } else {
+                    ocultarCampo("cantidadDiv");
+                    ocultarCampo("inmueblesDiv");
+                    ocultarCampo("comunidadDiv");
+                    ocultarCampo("consultaDiv");
+                    ocultarCampo("aceptacionDiv");
+                }
+            }
+
+            function validarCantidad() {
+                var cantidad = document.getElementById("cantidad").value;
+                if (cantidad != "") {
+                    mostrarCampo("inmueblesDiv");
+                } else {
+                    ocultarCampo("inmueblesDiv");
+                    ocultarCampo("comunidadDiv");
+                    ocultarCampo("consultaDiv");
+                    ocultarCampo("aceptacionDiv");
+                }
+            }
+
+            function validarInmuebles() {
+                var inmuebles = document.getElementById("inmuebles").value;
+                if (inmuebles != "") {
+                    mostrarCampo("comunidadDiv");
+                } else {
+                    ocultarCampo("comunidadDiv");
+                    ocultarCampo("consultaDiv");
+                    ocultarCampo("aceptacionDiv");
+                }
+            }
+
+            function validarComunidad() {
+                var comunidad = document.getElementById("comunidad").value;
+                if (comunidad != "") {
+                    mostrarCampo("consultaDiv");
+                } else {
+                    ocultarCampo("consultaDiv");
+                    ocultarCampo("aceptacionDiv");
+                }
+            }
+
+            function validarConsulta() {
+                var consulta = document.getElementById("consulta").value;
+                if (consulta != "") {
+                    mostrarCampo("aceptacionDiv");
+                } else {
+                    ocultarCampo("aceptacionDiv");
+                }
+            }
+
+            // Asignar eventos para validar cada campo a medida que se va llenando
+            document.getElementById("nombre").addEventListener("input", validarNombre);
+            document.getElementById("email").addEventListener("input", validarEmail);
+            document.getElementById("testamento").addEventListener("input", validarTestamento);
+            document.getElementById("cantidad").addEventListener("input", validarCantidad);
+            document.getElementById("inmuebles").addEventListener("input", validarInmuebles);
+            document.getElementById("comunidad").addEventListener("change", validarComunidad);
+            document.getElementById("consulta").addEventListener("change", validarConsulta);           
+        </script>
+        <div class="card overflow-auto mx-3" style="height: 500px">
+
+            </div>
+        </div>
+    </body>
+</html>
